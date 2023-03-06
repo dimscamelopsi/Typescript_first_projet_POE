@@ -9,13 +9,32 @@ export class ListHTML {
      */
     private listType: string = 'ul'
 
-    private listContent: Array<string> = ['Aubert', 'Talut', 'Saulay'] // string[] <=> Array<string>
+    // private listContent: Array<string> = ['Aubert', 'Talut', 'Saulay', 'bouh'] // string[] <=> Array<string>
+
+    private listContent: Array<any> = [
+        {
+          name: 'Aubert',
+          firstName: 'Jean-Luc'
+        },
+        {
+          name: 'Talut',
+          firstName: 'Jean'
+        },
+        {
+          name: 'Saulay',
+          firstName: 'Mélanie'
+        },
+      ]
+
+    public getListContent(){
+        return this.listContent
+    }
 
     public setListType(listType: string): void {
         this.listType = listType
     }
     
-    public build(): void {
+    public build(): HTMLUListElement {
         // Have to build a ul | ol list with as many li as listContent length
         // <ul>
         //  <li>Aubert</li>
@@ -32,5 +51,6 @@ export class ListHTML {
             line.textContent = name
             list.appendChild(line)
         }
+        return list
     }
 }

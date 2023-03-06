@@ -1,4 +1,5 @@
 import { ListHTML } from './html-elements/list-html'
+import { TableHtml } from './html-elements/table-html'
 /**
  * main.ts
  * @author Aélion <jean-luc.aubert@aelion.fr>
@@ -20,7 +21,10 @@ class Main {
 
         // New instance of ListHTML
         const listHTML = new ListHTML()
-        listHTML.build()
+        app.appendChild(listHTML.build())
+
+        const tableHtml = new TableHtml()
+        app.appendChild(tableHtml.buildTable()) 
     }
 }
 
