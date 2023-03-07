@@ -9,22 +9,22 @@ export class ListHTML {
      */
     private listType: string = 'ul'
 
-    // private listContent: Array<string> = ['Aubert', 'Talut', 'Saulay', 'bouh'] // string[] <=> Array<string>
+  private listContent: Array<string> = ['Aubert', 'Talut', 'Saulay', 'bouh'] // string[] <=> Array<string>
 
-    private listContent: Array<any> = [
-        {
-          name: 'Aubert',
-          firstName: 'Jean-Luc'
-        },
-        {
-          name: 'Talut',
-          firstName: 'Jean'
-        },
-        {
-          name: 'Saulay',
-          firstName: 'Mélanie'
-        },
-      ]
+    // private listContent: Array<any> = [
+    //     {
+    //       name: 'Aubert',
+    //       firstName: 'Jean-Luc'
+    //     },
+    //     {
+    //       name: 'Talut',
+    //       firstName: 'Jean'
+    //     },
+    //     {
+    //       name: 'Saulay',
+    //       firstName: 'Mélanie'
+    //     },
+    //   ]
 
     public getListContent(){
         return this.listContent
